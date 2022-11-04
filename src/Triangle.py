@@ -10,7 +10,7 @@ class Triangle(Figure):
         Figure.value_validator(side_b)
         Figure.value_validator(side_c)
         if side_a + side_b <= side_c or side_a + side_c <= side_b or side_b + side_c <= side_a:
-            raise ValueError("Треугольник с заданными сторонами не существует")
+            raise ValueError("Triangle with given sides does not exist")
         self._name = "Triangle"
         self._side_a = side_a
         self._side_b = side_b

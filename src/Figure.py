@@ -6,9 +6,9 @@ class Figure:
     @staticmethod
     def value_validator(value):
         if type(value) != int and type(value) != float:
-            raise ValueError("Переданный параметр должен быть числом")
+            raise ValueError("Parameter must be a number")
         if value <= 0:
-            raise ValueError("Переданный параметр должен быть больше нуля")
+            raise ValueError("Parameter must be greater than zero")
 
     @property
     def name(self):
@@ -24,5 +24,5 @@ class Figure:
 
     def add_area(self, figure):
         if not isinstance(figure, Figure):
-            raise ValueError("Переданный объект должен быть геометрической фигурой")
+            raise ValueError("The object must be a geometric figure")
         return self.area + figure.area
